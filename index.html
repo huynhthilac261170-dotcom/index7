@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Đồ Copphay Anime</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav {
+      background-color: #ff5050;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 280px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .product:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      color: #555;
+    }
+
+    .product button {
+      padding: 8px 16px;
+      margin-top: 10px;
+      background-color: #ff5050;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .product button:hover {
+      background-color: #e03e3e;
+    }
+
+    #cart {
+      background-color: white;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #cart h2 {
+      text-align: center;
+    }
+
+    #cart-items {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #cart-items li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    #checkout {
+      margin-top: 15px;
+    }
+
+    #checkout input {
+      width: 95%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #checkout button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #checkout button:hover {
+      background-color: #218838;
+    }
+
+    #confirm {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛍️ Shop Đồ Copphay Anime</h1>
+  <p>Liên hệ: 0969110046 Gmail: huynhthilac261170@gmail.com</p>
+</header>
+
+<nav>
+  <a href="#">Trang Chủ</a>
+  <a href="#">Sản Phẩm</a>
+  <a href="https://huynhthilac261170-dotcom.github.io/index4/">Liên Hệ</a>
+</nav>
+
+<div class="container">
+  <!-- Sản phẩm 1 -->
+  <div class="product">
+    <img src="https://admin.yuncosplay.vn/Assets/img/product_image/cosplay%20Naruto%20(2).jpg" alt="">
+    <h3>Trang phục Naruto</h3>
+    <p>Giá: 900.000đ</p>
+    <button onclick="addToCart('Trang phục Naruto', 500000)">Thêm vào giỏ</button>
+  </div>
+
+  <!-- Sản phẩm 2 -->
+  <div class="product">
+    <img src="https://cf.shopee.vn/file/9870f772c68d9d0c7773c415de76d1e8" alt="Kimetsu Outfit">
+    <h3>Đồng phục Kimetsu</h3>
+    <p>Giá: 650.000đ</p>
+    <button onclick="addToCart('Đồng phục Kimetsu', 650000)">Thêm vào giỏ</button>
+  </div>
+
+  <!-- Sản phẩm 3 -->
+  <div class="product">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZR3l_emtQ8-Qrn3NsgihOPnd7O1qeDq6Ljg&s" alt="Luffy Hat">
+    <h3>Trang Phục luffy</h3>
+    <p>Giá: 150.000đ</p>
+    <button onclick="addToCart('Nón Luffy', 150000)">Thêm vào giỏ</button>
+  </div>
+
+  <!-- Sản phẩm 4 -->
+  <div class="product">
+    <img src="https://product.hstatic.net/1000273792/product/9c_4f985a22497c448aa1cbb044948b3df2.jpg" alt="AOT Jacket">
+    <h3>Áo Attack on Titan</h3>
+    <p>Giá: 210.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  
+  <!-- Sản phẩm 5 -->
+  <div class="product">
+    <img src="https://img.alicdn.com/imgextra/i2/TB14FqlIFXXXXaKXpXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg_.webp" alt="kirito">
+    <h3>Áo Kirito</h3>
+    <p>Giá: 450.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  <!-- Sản phẩm 6 -->
+  <div class="product">
+    <img src="https://down-vn.img.susercontent.com/file/sg-11134201-7rd5i-lwej9we812k776" alt="Hianta">
+    <h3>Trang phục Hinata</h3>
+    <p>Giá: 830.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  <!-- Sản phẩm 7 -->
+  <div class="product">
+    <img src="https://img.alicdn.com/imgextra/i1/1088115578/O1CN01hiQ2O71r4lp638Pqe_!!0-item_pic.jpg_400x400.jpg_.webp" alt="Sasuke">
+    <h3>Trang Phục Sasuke</h3>
+    <p>Giá: 1.200.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  <!-- Sản phẩm 8 -->
+  <div class="product">
+    <img src="https://i.redd.it/asuna-cosplay-self-v0-a3axv5wy0hxc1.jpg?width=1066&format=pjpg&auto=webp&s=a0183b0bcedcc16bd203a48057fba8081f3a0b98" alt="Asuna">
+    <h3>Trang Phục Asuna</h3>
+    <p>Giá: 1.500.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  <!-- Sản phẩm 9 -->
+  <div class="product">
+    <img src="https://yeepvn.sgp1.digitaloceanspaces.com/2023/04/sg-11134201-22110-9i7ht8bbmtjv05.jpg" alt="Rem">
+    <h3>Trang Phục Rem</h3>
+    <p>Giá: 1.550.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+  <!-- Sản phẩm 10 -->
+  <div class="product">
+    <img src="https://img.alicdn.com/imgextra/i1/680687472/O1CN01m9PllE254DsjnWIK8_!!680687472.jpg_600x600.jpg_.webp" alt="Ran">
+    <h3>Trang Phục Ran</h3>
+    <h3></h3>
+    <p>Giá: 1.550.000đ</p>
+    <button onclick="addToCart('Áo AOT', 550000)">Thêm vào giỏ</button>
+  </div>
+</div>
+
+<!-- Giỏ hàng -->
+<div id="cart">
+  <h2>🛒 Giỏ hàng của bạn</h2>
+  <ul id="cart-items"></ul>
+  <p><strong>Tổng cộng:</strong> <span id="total">0</span> đ</p>
+
+  <div id="checkout">
+    <h3>Thông tin nhận hàng</h3>
+    <input type="text" id="name" placeholder="Họ tên">
+    <input type="text" id="address" placeholder="Địa chỉ nhận hàng">
+    <button onclick="checkout()">Thanh toán</button>
+    <p id="confirm"></p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Shop Copphay Anime. Bản quyền thuộc về bạn.</p>
+</footer>
+
+<script>
+  const cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+  }
+
+  function updateCart() {
+    const list = document.getElementById('cart-items');
+    const totalSpan = document.getElementById('total');
+    list.innerHTML = '';
+    let total = 0;
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.name} - ${item.price.toLocaleString()}đ`;
+      list.appendChild(li);
+      total += item.price;
+    });
+    totalSpan.textContent = total.toLocaleString();
+  }
+
+  function checkout() {
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const confirm = document.getElementById('confirm');
+
+    if (!name || !address) {
+      confirm.style.color = 'red';
+      confirm.textContent = '⚠️ Vui lòng nhập đầy đủ họ tên và địa chỉ!';
+      return;
+    }
+
+    confirm.style.color = 'green';
+    confirm.textContent = `✅ Cảm ơn ${name}! Đơn hàng sẽ được giao đến ${address}.`;
+
+    cart.length = 0;
+    updateCart();
+  }
+</script>
+
+</body>
+</html>
